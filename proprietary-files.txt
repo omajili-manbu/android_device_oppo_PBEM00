@@ -919,13 +919,8 @@ vendor/bin/ATFWD-daemon
 vendor/bin/adpl
 vendor/bin/hw/qcrild
 vendor/bin/netmgrd
-vendor/bin/pd-mapper
 vendor/bin/port-bridge
-vendor/bin/qrtr-cfg
-vendor/bin/qrtr-lookup
-vendor/bin/qrtr-ns
 vendor/bin/qti
-vendor/bin/rmt_storage
 vendor/bin/ssgqmigd
 vendor/bin/ssgtzd
 vendor/bin/tftp_server
@@ -952,7 +947,6 @@ vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 vendor/lib64/libqcbor.so
 vendor/lib64/libqcrilFramework.so
-vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libril-qc-hal-qmi.so
 vendor/lib64/libril-qc-ltedirectdisc.so
@@ -1087,12 +1081,8 @@ vendor/etc/sensors/config/sx932x_0.json
 vendor/etc/sensors/config/tsl2540_0.json
 vendor/etc/sensors/sns_reg_config
 
-# Thermal engine
-vendor/bin/thermal-engine
--vendor/lib64/libthermalclient.so
-
-# Thermal config
-vendor/etc/thermal-engine.conf
+# Thermal (engine/conf retired; client lib kept for perfd chain)
+vendor/lib64/libthermalclient.so
 
 # Time services
 vendor/app/TimeService/TimeService.apk
