@@ -90,7 +90,9 @@ on post-fs-data
 # Silver Only configuration cannot work with 0-7
 on boot
     # chown system system /sys/kernel/hbtp/display_pwr
-    start rmt_storage
+    # stock typo "start rmt_storage" referenced a nonexistent service name;
+    # the real service is vendor.rmt_storage (init.qcom.rc)
+    start vendor.rmt_storage
     start rfs_access
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground/cpus 0-7
