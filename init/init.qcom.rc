@@ -680,7 +680,10 @@ service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     user root
     oneshot
 
-service vendor.rmt_storage /vendor/bin/rmt_storage
+# rmtfs (source-built, opensource/rmtfs) replaces the rmt_storage blob.
+# -P -o /dev/block/by-name: open raw EFS partitions by partlabel from
+# /dev/block/by-name (modemst1/2, fsc, fsg, oppostanvbk, oppodycnvbk).
+service vendor.rmt_storage /vendor/bin/rmtfs -o /dev/block/by-name -P
     class core
     user root
     shutdown critical

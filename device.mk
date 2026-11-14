@@ -366,6 +366,15 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     vendor/qcom/opensource/usb/etc
 
+# QRTR stack (source-built; requires 7.3 kernel with CONFIG_QRTR/rmtfs_mem)
+PRODUCT_PACKAGES += \
+    qrtr-ns \
+    qrtr-cfg \
+    qrtr-lookup \
+    libqrtr \
+    rmtfs \
+    pd-mapper
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
