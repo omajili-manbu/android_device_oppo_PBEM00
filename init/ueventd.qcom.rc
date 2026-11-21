@@ -128,6 +128,10 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/media*               0660   system     camera
 /dev/v4l-subdev*          0660   system     camera
 /dev/qseecom              0660   system     drmrpc
+/dev/dma_heap/qseecom_ta_region  0660   system     drmrpc
+/dev/dma_heap/default_cma_region 0660   system     drmrpc
+/dev/dma_heap/system             0660   system     drmrpc
+/dev/dma_heap/system-uncached    0660   system     drmrpc
 /dev/qce                  0660   system     drmrpc
 /dev/smcinvoke            0660   system     drmrpc
 /dev/qsee_ipc_irq_spss    0660   system     drmrpc

@@ -375,6 +375,13 @@ PRODUCT_PACKAGES += \
     rmtfs \
     pd-mapper
 
+# QSEE userspace rebuild (source-built; requires 7.3 kernel with ported
+# /dev/qseecom driver + dma-buf heaps, see vendor opensource/qsee)
+PRODUCT_PACKAGES += \
+    libQSEEComAPI \
+    qseecomd \
+    qsee_selftest
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
